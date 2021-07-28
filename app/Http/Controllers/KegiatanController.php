@@ -10,4 +10,9 @@ class KegiatanController extends Controller
     {
         return view('kegiatan.index');
     }
+
+    public function show()
+    {
+        return view('kegiatan.show');
+    }
 }

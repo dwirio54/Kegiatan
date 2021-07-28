@@ -12,13 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/cek_kegiatan','CekKegiatanController@index')->name('cek_kegiatan.index');
+Route::group(['prefix' => 'kegiatan'], function(){
+    Route::get('/tampilkan', 'KegiatanController@show')->name('kegiatan.tampilkan');
+    Route::get('/index', 'KegiatanController@index')->name('kegiatan.index');
+});
 Route::get('/pendaftaran', 'DaftarController@index')->name('daftar.index');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard.index');
 Route::get('/verifikasi-pendaftaran','VerifikasiController@index')->name('verifikasi-pendaftaran.index');
@@ -28,7 +31,5 @@ Route::group(['prefix' => 'DataSiswa'], function() {
     Route::get('/index', 'DataSiswaController@index')->name('datasiswa.index');
 });
 
-Route::group(['prefix' => 'ManageKegiatan'],function(){
-    Route::get('/index', 'KegiatanController@index')->name('kegiatan.index');
-});
+
 
