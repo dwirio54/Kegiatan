@@ -27,8 +27,8 @@ Route::get('/dashboard', 'DashboardController@index')->name('dashboard.index');
 Route::get('/verifikasi-pendaftaran','VerifikasiController@index')->name('verifikasi-pendaftaran.index');
 Route::get('/laporan', 'LaporanController@index')->name('laporan.index');
 
-Route::group(['prefix' => 'DataSiswa'], function() {
-    Route::get('/index', 'DataSiswaController@index')->name('datasiswa.index');
+Route::group(['prefix' => 'data'], function() {
+    Route::get('/siswa', 'DataSiswaController@index')->name('data.siswa');
 });
 
 
