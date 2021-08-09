@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="mb-3">
-                            <a href="" class="btn btn-secondary">Tambah Siswa</a>
+                            <a href="{{route('tambah-data.siswa')}}" class="btn btn-secondary">Tambah Siswa</a>
                         </div>
                         <form action="" method="post">
                             <div class="row">
@@ -22,7 +22,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <button class="btn btn-secondary" type="submit">Simpan Data Siswa</button>
+                                    <button class="btn btn-secondary" type="submit">Cari Data</button>
                                 </div>
                             </div>
                         </form>
@@ -46,7 +46,7 @@
                                         <td>RPL</td>
                                         <td>Aktif</td>
                                         <td>
-                                            <a href="#" class="btn btn-secondary btn-sm">Edit</a>
+                                            <a href="{{route(‘edit-data.siswa’)}}" class="btn btn-secondary btn-sm">Edit</a>
                                             <button class="btn btn-secondary btn-sm" type="submit">Hapus</button>
                                         </td>
                                     </tr>

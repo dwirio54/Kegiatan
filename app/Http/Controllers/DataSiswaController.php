@@ -10,4 +10,14 @@ class DataSiswaController extends Controller
     {
         return view('data.siswa.index');
     }
+
+    public function create()
+    {
+        return view('data.siswa.create');
+    }
+
+    public function edit()
+    {
+        return view('data.siswa.edit');
+    }
 }
