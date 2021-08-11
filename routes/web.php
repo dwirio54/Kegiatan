@@ -39,5 +39,14 @@ Route::group(['prefix' => 'edit-data'], function() {
     route::get('siswa', 'DataSiswaController@edit')->name('edit-data.siswa');
 });
 
+Route::group(['prefix'  => 'manage-kegiatan'], function(){
+    route::get('/','ManagekegiatanController@index')->name('manage-kegiatan');
+    route::get('/add-form','ManagekegiatanController@create')->name('manage-kegiatan.add-form');
+    route::get('/add-form/edit-kegiatan','ManagekegiatanController@edit')->name('manage-kegiatan.add-form.edit-kegiatan');
+});
+
+    
+
+
 
 
