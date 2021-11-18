@@ -12,8 +12,8 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="mb-3">
-                            <a href="{{route('verifikasi-pendaftaran.ulang')}}" class="btn btn-primary">Daftar Ulang</a>
-                            <a href="{{route('verifikasi-pendaftaran.peserta')}}" class="btn btn-primary">Peserta</a>
+                            <a href="{{route('verifikasi-pendaftaran.ulang')}}" class="btn btn-secondary">Daftar Ulang</a>
+                            <a href="{{route('verifikasi-pendaftaran.peserta')}}" class="btn btn-secondary">Peserta</a>
                         </div>
 
                         <form action="" method="post">
@@ -41,25 +41,23 @@
                                         <th>Nama</th>
                                         <th>TGL Daftar</th>
                                         <th>Status</th>
+                                        <th>Option</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($verifikasiPembayarans as $pembayaran)
                                     <tr>
-                                        <td>{{$pembayaran->activity->kode_activity}}</td>
-                                        <td>Nisn belum ada</td>
-                                        <td>{{$pembayaran->user->name}}</td>
-                                        <td>{{$pembayaran->created_at->diffForHumans()}}</td>
+                                        <td>12313125</td>
+                                        <td>12569024951</td>
+                                        <td>Dwi Rio</td>
+                                        <td>12-12-2000</td>
+                                        <td>Aktif</td>
                                         <td>
-                                        <span class="badge bg-secondary">
-                                             {{$pembayaran->status}}
-                                        </span>
+                                            <a href="" class="btn btn-secondary btn-sm">Edit</a>
+                                            <button type="submit" class=" btn btn-danger btn-sm">Hapus</button>
                                         </td>
                                     </tr>
-                                    @endforeach
                                 </tbody>
                             </table>
-                            {{$verifikasiPembayarans->links()}}
                         </div>
                     </div>
                 </div>
