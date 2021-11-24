@@ -12,7 +12,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="mb-3">
-                            <a href="{{route('verifikasi-pendaftaran.ulang')}}" class="btn btn-secondary">Daftar Ulang</a>
+                            <a href="{{route('verifikasi-pendaftaran.ulang')}}" class="btn btn-primary">Daftar Ulang</a>
                             <a href="{{route('verifikasi-pendaftaran.peserta')}}" class="btn btn-secondary">Peserta</a>
                         </div>
 
@@ -28,7 +28,9 @@
                                         <input type="date" class="form-control">
                                     </div>
                                 </div>
-                               
+                                <div>
+                                    <button class="btn btn-secondary" type="submit">Cari Data</button>
+                                </div>
                             </div>
                         </form>
 
@@ -45,17 +47,22 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($registers as $register)
+                                        
                                     <tr>
-                                        <td>12313125</td>
-                                        <td>12569024951</td>
-                                        <td>Dwi Rio</td>
-                                        <td>12-12-2000</td>
-                                        <td>Aktif</td>
+                                        <td>{{$register->activity->kode_activity}}</td>
+                                        <td>Field belum dibuat</td>
+                                        <td>{{$register->user->name}}</td>
+                                        <td>{{$register->created_at->diffForHumans()}}</td>
                                         <td>
-                                            <a href="" class="btn btn-secondary btn-sm">Edit</a>
-                                            <button type="submit" class=" btn btn-danger btn-sm">Hapus</button>
+                                            <span class="badge badge-info">
+                                                {{$register->status}}</td>
+                                            </span>                               
+                                        <td>
+                                            <a href="http://" class="btn btn-info btn-sm">Cetak  Sertifikat</a>
                                         </td>
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

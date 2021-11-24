@@ -4,7 +4,7 @@
     <div class="container">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">Verifikasi Pendaftaran</li> 
+                <li class="breadcrumb-item active" aria-current="page">Daftar  Ulang</li> 
                </ol>
              </nav>
         <div class="row">
@@ -28,9 +28,7 @@
                                         <input type="date" class="form-control">
                                     </div>
                                 </div>
-                                <div>
-                                    <button class="btn btn-secondary" type="submit">Cari Data</button>
-                                </div>
+                               
                             </div>
                         </form>
 
@@ -59,7 +57,11 @@
                                                 {{$register->status}}</td>
                                             </span>                               
                                         <td>
-                                            <a href="http://" class="btn btn-info btn-sm">Cetak  Sertifikat</a>
+                                            <form action="{{route('verifikasi-pendaftaran.accept', $register->id)}}" method="post">
+                                                @csrf
+                                                @method('PATCH')
+                                                <button class="btn btn-info btn-sm">Tambah Peserta</button>
+                                            </form>
                                         </td>
                                     </tr>
                                     @endforeach

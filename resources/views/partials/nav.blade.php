@@ -25,9 +25,6 @@
                 <li class="nav-item">
                     <a href="{{route('verifikasi-pendaftaran')}}" class="nav-link">VERIFIKASI PENDAFTARAN</a>
                 </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link">LAPORAN</a>
-                </li>
                 
             </ul>
 
